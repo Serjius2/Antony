@@ -1,0 +1,6 @@
+{
+    "C_Cpp.default.compilerPath": "c:\\msys2\\mingw64\\bin\\gcc.exe",
+    "code-runner.executorMap": {
+    "c": "chcp 65001 > nul && gcc -std=c17 -Wall -Wextra -Wpedantic -Wconversion -g $fullFileName -o $fileNameWithoutExt.exe && .\\$fileNameWithoutExt.exe"
+    }
+}
