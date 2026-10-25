@@ -3,6 +3,12 @@ int main(void) {
 int D, S, P;
 printf("Введите делитель: ");
 scanf("%d", &D);
+
+if (D == 0) {
+    printf("Делитель не может быть равен нулю!\n");
+    return 1;
+}
+
 printf("Введите требуемая сумма цифр кода: ");
 scanf("%d", &S);
 printf("Введение требуемое произведение цифр кода: ");
@@ -13,25 +19,21 @@ int min_code = -1;
 int found_count =0;
 for(int a=1; a<10; a++){
     for(int b=0; b<10; b++){
-        for(int c=0; c<10; c++){
-            char x = 0;
-            
-            if(a==b || a==c || b==c){
-                x=1;
+        for(int c=0; c<10; c++){            
+            if(a==b || a==c || b==c){               
                 discarded++;
                 continue;
             }
-            if(a + b + c != S){
-                x=1;
+            if(a + b + c != S){               
                discarded++;
                 continue;}
-            if(a * b * c != P){
-                x=1;
+
+            if(a * b * c != P){               
                 discarded++;
                 continue;}
+
             int num = 100*a+10*b+c;    
-            if(num % D !=0 ){
-                x=1;
+            if(num % D !=0 ){                
                 discarded++;
                 continue;
             }
