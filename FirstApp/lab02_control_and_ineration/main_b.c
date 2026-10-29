@@ -26,7 +26,7 @@ if (eps <= 0.0) {
         
         double next_t = t * z / (k + 1);
         
-        if (fabs(next_t) <= eps) {
+        if (fabs(next_t) <= eps) { 
             converged = 1; 
         } else {
             t = next_t;
